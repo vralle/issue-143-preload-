@@ -21,6 +21,7 @@ const cfg = {
     new HtmlBundlerPlugin({
       entry: {
         index: "./src/views/index.html",
+        inline: "./src/views/inline.html",
       },
       css: {
         filename: "css/[name].[contenthash:8].css",

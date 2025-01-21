@@ -7,7 +7,6 @@
     "build": "webpack build"
   },
   "devDependencies": {
-    "css-loader": "^7.1.2",
     "html-bundler-webpack-plugin": "^4.15.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
