@@ -1,14 +1,20 @@
-const path = require("node:path");
-const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
+import { join } from "node:path";
 
-module.exports = {
+import HtmlBundlerPlugin from "html-bundler-webpack-plugin";
+
+import { dirname } from "node:path";
+import url from "node:url";
+const __filename = url.fileURLToPath(new URL(import.meta.url));
+const __dirname = dirname(__filename);
+
+const cfg = {
   mode: "production",
   output: {
     crossOriginLoading: "anonymous",
   },
   resolve: {
     alias: {
-      "@src": path.join(__dirname, "src"),
+      "@src": join(__dirname, "src"),
     },
   },
   plugins: [
@@ -22,9 +28,6 @@ module.exports = {
       integrity: "auto",
     }),
   ],
-  module: {
-    defaultRules: [
-      "...",
-    ],
-  },
 };
+
+export default cfg;

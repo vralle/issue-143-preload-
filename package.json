@@ -2,7 +2,7 @@
   "name": "issue-143",
   "version": "1.0.0",
   "description": "Reproducing of issue 143",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "webpack build"
   },
