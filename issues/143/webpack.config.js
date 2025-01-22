@@ -9,8 +9,9 @@ const __dirname = dirname(__filename);
 
 const cfg = {
   mode: "production",
+  cache: false,
   output: {
-    publicPath: "auto",
+    publicPath: "https://example.site/",
     crossOriginLoading: "anonymous",
   },
   resolve: {
