@@ -6,7 +6,6 @@ RUN set -eux; \
     apt-get update; \
     # upgrade installed packages
     apt-get upgrade --yes --no-install-recommends; \
-    apt-get install default-jre --yes --no-install-recommends; \
     rm -rf /var/lib/apt/lists/*
 
 RUN set -eux; \
