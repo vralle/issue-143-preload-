@@ -1,14 +1,9 @@
 {
-  "name": "issue-143",
+  "name": "devcontainer-issues",
+  "description": "Workspace to reproduce errors in an isolated environment",
   "version": "1.0.0",
-  "description": "Reproducing of issue 143",
-  "type": "module",
-  "scripts": {
-    "build": "webpack build"
-  },
-  "devDependencies": {
-    "html-bundler-webpack-plugin": "^4.15.0",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
-  }
+  "private": true,
+  "workspaces": [
+    "issues/*"
+  ]
 }

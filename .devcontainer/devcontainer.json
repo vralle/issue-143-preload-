@@ -1,0 +1,20 @@
+{
+  "name": "Node.js workspace with issues",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteEnv": {
+    "TZ": "${localEnv:TZ:Europe/Berlin}"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "workspaceFolder": "/workspace",
+  "updateContentCommand": {
+    "Update owner of files in workspace dir": "sudo chown -R node /workspace",
+    "Update access permissions of files in workspace dir": "sudo chmod -R 1777 /workspace",
+    "Update global packages": "sudo npm update -g && npm cache clean --force > /dev/null 2>&1"
+  },
+  "postCreateCommand": "npm install"
+}
