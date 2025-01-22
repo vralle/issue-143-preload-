@@ -10,6 +10,7 @@ const __dirname = dirname(__filename);
 const cfg = {
   mode: "production",
   output: {
+    publicPath: "auto",
     crossOriginLoading: "anonymous",
   },
   resolve: {
@@ -26,9 +27,13 @@ const cfg = {
       css: {
         filename: "css/[name].[contenthash:8].css",
       },
+      minify: false,
       integrity: "auto",
     }),
   ],
+  optimization: {
+    minimize: false,
+  }
 };
 
 export default cfg;
